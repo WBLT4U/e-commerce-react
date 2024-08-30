@@ -35,3 +35,19 @@ footer li {
   opacity: 0.5;
   color: black;
 }
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-footer {
+    grid-template-columns: 1fr;
+  }
+}

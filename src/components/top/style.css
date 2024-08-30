@@ -29,3 +29,19 @@
   position: absolute;
   right: 0;
 }
+@media (max-width: 768px) {
+  .TopCate {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-TopCate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-TopCate {
+    grid-template-columns: 1fr;
+  }
+}

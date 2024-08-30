@@ -15,6 +15,22 @@ body {
   background: #f6f9fc;
   padding: 50px 0;
 }
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
 .container {
   max-width: 90%;
   margin: auto;

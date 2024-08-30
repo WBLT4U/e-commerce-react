@@ -27,3 +27,19 @@
   left: 0;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .homeSlide {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-homeSlide {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-homeSlide {
+    grid-template-columns: 1fr;
+  }
+}

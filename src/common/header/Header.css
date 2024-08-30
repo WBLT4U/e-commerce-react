@@ -11,6 +11,22 @@
   margin-right: 30px;
   font-size: 13px;
 }
+@media (max-width: 768px) {
+  .head {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-head {
+    grid-template-columns: 1fr;
+  }
+}
 /*------head-----------*/
 /*------search-----------*/
 .search {
@@ -50,6 +66,22 @@
   border-left: 2px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
+@media (max-width: 768px) {
+  .search {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-search {
+    grid-template-columns: 1fr;
+  }
+}
 .cart {
   position: relative;
 }
@@ -67,6 +99,22 @@
 }
 .search .f_flex {
   justify-content: end;
+}
+@media (max-width: 768px) {
+  .cart {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-cart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-cart {
+    grid-template-columns: 1fr;
+  }
 }
 /*------search-----------*/
 .catgrories {
@@ -87,6 +135,22 @@
 }
 .catgrories h4 i {
   margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .catgrories {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-catgrories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-catgrories {
+    grid-template-columns: 1fr;
+  }
 }
 header {
   height: 8vh;
@@ -120,6 +184,22 @@ header ul li a:hover {
   box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .grid-header {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 768px) {
   header ul {
@@ -137,6 +217,22 @@ header ul li a:hover {
     height: 100vh;
     background-color: white;
     z-index: 888;
+  }
+  @media (max-width: 768px) {
+    .nav-links-mobile {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+  .grid-nav-links-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-nav-links-mobile {
+      grid-template-columns: 1fr;
+    }
   }
   header ul li {
     width: 100%;
