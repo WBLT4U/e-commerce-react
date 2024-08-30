@@ -2,22 +2,7 @@
   padding: 30px;
   height: 90vh;
 }
-@media (max-width: 768px) {
-  .shop {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-shop {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-shop {
-    grid-template-columns: 1fr;
-  }
-}
 .chead h1 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -27,22 +12,7 @@
   border-left: 3px solid rgba(0, 0, 0, 0.5);
   padding-left: 70px;
 }
-@media (max-width: 768px) {
-  .chead {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-chead {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-chead {
-    grid-template-columns: 1fr;
-  }
-}
 .shop .category .box {
   background-color: #f6f9fc;
   margin: 15px 0;
@@ -89,19 +59,48 @@
 .shop .product:hover {
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
-@media (max-width: 768px) {
-  .category {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-category {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-category {
-    grid-template-columns: 1fr;
+/* Media Query for screens 480px wide or smaller */
+@media (max-width: 480px) {
+  .shop .category {
+    padding: 10px; /* Further reduced padding */
+    height: auto; /* Ensure height fits content */
+  }
+
+  .chead h1 {
+    font-size: 16px; /* Smaller font size */
+    margin-bottom: 10px;
+  }
+
+  .chead h1:nth-child(2) {
+    padding-left: 30px; /* Further adjust padding */
+  }
+
+  .shop .category .box {
+    margin: 5px 0; /* Further reduced margin */
+    padding: 3px 5px; /* Adjust padding */
+  }
+
+  .shop .box2 {
+    margin-top: 30px !important; /* Further reduced margin-top */
+  }
+
+  .shop .category button {
+    padding: 6px; /* Adjust button padding */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .shop .contentWidth {
+    margin-left: 10px; /* Further reduced margin */
+  }
+
+  .grid1 {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-gap: 10px; /* Adjust grid gap */
+  }
+
+  .shop .product img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
   }
 }

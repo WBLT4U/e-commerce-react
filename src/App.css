@@ -69,23 +69,7 @@ button {
 .boxShadow {
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
-/* media query for mobile devices */
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
 /*---------category----------*/
 .contentWidth {
   width: 77%;
@@ -116,23 +100,6 @@ button {
 .category .box:hover {
   background-color: #ffe1e6;
   cursor: pointer;
-}
-/* media query for mobile devices */
-@media (max-width: 768px) {
-  .category {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-category {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-@media (max-width: 768px) {
-  .grid-category {
-    grid-template-columns: 1fr;
-  }
 }
 
 /*---------category----------*/
@@ -181,23 +148,7 @@ button {
   color: #fff;
   margin: 10px;
 }
-/* media query for mobile devices */
-@media (max-width: 768px) {
-  .discount {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-discount {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-discount {
-    grid-template-columns: 1fr;
-  }
-}
 /*---------product-----------*/
 .product {
   background: #fff;
@@ -258,23 +209,7 @@ button {
 .product:hover .product-like {
   opacity: 1;
 }
-/* media query for mobile devices */
-@media (max-width: 768px) {
-  .product {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-product {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-product {
-    grid-template-columns: 1fr;
-  }
-}
 /*---------product-----------*/
 /*----- control btn -------*/
 .control-btn .next,
@@ -307,23 +242,7 @@ button {
   color: white;
   cursor: pointer;
 }
-/* media query for mobile devices */
-@media (max-width: 768px) {
-  .control-btn {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-control-btn {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-control-btn {
-    grid-template-columns: 1fr;
-  }
-}
 /*----- control btn -------*/
 /*----- heading -------*/
 .heading .heading-left i {
@@ -349,19 +268,93 @@ button {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
+
+/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-  .heading {
+  .btn-primary {
     width: 100%;
-    padding: 0 10px;
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+  
+  .grid-btn-primary {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+  
+  .category {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height to fit content */
+  }
+  
+  .contentWidth {
+    width: 100%; /* Full width for content */
+  }
+  
+  .row {
+    width: 100%; /* Full width for row */
+  }
+  
+  .grid, .grid2 {
+    grid-template-columns: 1fr 1fr; /* Two columns instead of six or four */
+    grid-gap: 15px; /* Adjust grid gap */
+  }
+  
+  .control-btn .next, .control-btn .prev {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .control-btn .prev i, .control-btn .next i {
+    font-size: 18px;
+  }
+  
+  .heading .heading-left h2 {
+    font-size: 20px; /* Smaller font size for headings */
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Adjust icon circle size */
   }
 }
-.grid-heading {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-@media (max-width: 768px) {
-  .grid-heading {
-    grid-template-columns: 1fr;
+/* Media Query for Very Small Screens */
+@media (max-width: 480px) {
+  .btn-primary {
+    padding: 8px; /* Further adjusted padding for very small screens */
+  }
+  
+  .grid, .grid2 {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  
+  .category img {
+    width: 25px; /* Smaller image */
+    height: 25px;
+  }
+  
+  .product h3 {
+    font-size: 16px; /* Adjusted font size */
+  }
+  
+  .product .rate i {
+    font-size: 14px;
+  }
+  
+  .product .price button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  
+  .heading .heading-left h2 {
+    font-size: 18px; /* Further smaller font size for headings */
+  }
+  
+  .icon-circle {
+    width: 35px;
+    height: 35px;
+    line-height: 35px; /* Further adjusted icon circle size */
   }
 }

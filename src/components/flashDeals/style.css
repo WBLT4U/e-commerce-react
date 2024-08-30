@@ -2,19 +2,15 @@
   background: #f6f9fc;
   padding: 50px 0;
 }
-@media (max-width: 768px) {
-  .flash {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.grid-flash {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
 @media (max-width: 768px) {
-  .grid-flash {
-    grid-template-columns: 1fr;
+  .flash {
+    padding: 30px 0; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .flash {
+    padding: 20px 0; /* Further reduced padding for very small screens */
   }
 }
