@@ -8,8 +8,27 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout by default */
+  gap: 20px;
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Media query for screens larger than 600px */
+@media (min-width: 600px) {
+  body {
+      grid-template-columns: repeat(2, 1fr); /* Two-column layout for medium screens */
+  }
+}
+
+/* Media query for screens larger than 900px */
+@media (min-width: 900px) {
+  body {
+      grid-template-columns: repeat(3, 1fr); /* Three-column layout for large screens */
+  }
 }
 .background {
   background: #f6f9fc;
