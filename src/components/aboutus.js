@@ -3,9 +3,10 @@ import "./MainPage/Home.css"
 //Create a homepage component...
 const AboutUs = () => {
   return (
+    <>
     <section className='home'>
       <div className='container d_flex'>
-        <p>
+      <h1> <p>
         ABOUT US <br></br>
           Hello! I’m a dedicated developer with a foundation in Computer Science from Kebbi State University of Science and Technology, and a rich background in PHP, Laravel, ReactJS, JavaScript, HTML5 and CSS. Since I began my journey in technology, I've designed and built custom web applications that not only meet the needs of users but improve their interactions and experiences.
 
@@ -19,7 +20,8 @@ I am always excited to connect with like-minded professionals and potential coll
         </p>
       </h1></div>
     </section>
-  );
-};
+    </>
+  )
+}
 
 export default AboutUs;
