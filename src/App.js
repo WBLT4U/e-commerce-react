@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./App.css"
-import { BrowserRouter as Router, Switch, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from "./common/header/Header"
 import Home from "./components/MainPage/Home"
 import AboutUs from "./components/aboutus"
@@ -68,12 +68,12 @@ function App() {
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
-          <Routes>
+          <Router>
         <Route path='/' element={<Home />}></Route>
         <Route path='./components/aboutus' element={<AboutUs />}></Route>
         <Route path='./components/contactus' element={<ContactUs />}></Route>
         
-      </Routes>
+      </Router>
         </Switch>
         <Footer />
       </Router>
