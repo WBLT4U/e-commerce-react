@@ -1,9 +1,9 @@
 import React from "react"
 import "./Header.css"
 import Head from "./Head"
-import Home from "./components/Home";
-import AboutUs from "./components/aboutus";
-import ContactUs from "./components/contactus";
+import Home from "../../components/MainPage/Home"
+import AboutUs from "./aboutus"
+import ContactUs from "./contactus"
 import Search from "./Search"
 import Navbar from "./Navbar"
 import { Routes, Route } from 'react-router-dom';
