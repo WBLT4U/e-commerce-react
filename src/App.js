@@ -2,9 +2,6 @@ import React, { useState } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from "./common/header/Header"
-import Home from "./components/MainPage/Home"
-import AboutUs from "./components/aboutus"
-import ContactUs from "./components/contactus"
 import Pages from "./pages/Pages"
 import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
@@ -61,9 +58,6 @@ function App() {
     <>
       <Router>
         <Header CartItem={CartItem} />
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/aboutus' element={<AboutUs />}></Route>
-        <Route path='/contactus' element={<ContactUs />}></Route>
         <Switch>
           <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
