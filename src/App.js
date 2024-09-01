@@ -65,7 +65,6 @@ function App() {
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
-        
           <Header CartItem={CartItem} />
         </Switch>
        
