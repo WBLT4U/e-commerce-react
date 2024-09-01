@@ -27,7 +27,7 @@ const Search = ({ CartItem }) => {
       // Perform the search action, like navigating to a search results page
       // For example, you might navigate to a new route with the search term
       console.log("Search term:", searchTerm);
-      navigate(`/search?query=${searchTerm}`);
+      
     }
   };
 
