@@ -62,19 +62,16 @@ function App() {
       <Router>
         <Header CartItem={CartItem} />
         <Switch>
-          
-          <Router>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='./components/aboutus' element={<AboutUs />}></Route>
-        <Route path='./components/contactus' element={<ContactUs />}></Route>
-        
-      </Router>
-      <Route path='/' exact>
+          <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
           </Route>
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='./components/aboutus' element={<AboutUs />}></Route>
+        <Route path='./components/contactus' element={<ContactUs />}></Route>
+        
         </Switch>
         <Footer />
       </Router>
