@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./search.css"
 const Search = ({ CartItem }) => {
   // fixed Header
   window.addEventListener("scroll", function () {
@@ -13,7 +13,7 @@ const Search = ({ CartItem }) => {
       <section className="search">
         <div className="container c_flex">
           <div className="logo width ">
-            
+            <h3>E-Commerce</h3>
           </div>
 
           {<div className="search-box f_flex">
