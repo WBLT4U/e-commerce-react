@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./search.css";
 
 const Search = ({ CartItem }) => {
-  // Fixed Header
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate(); // To navigate to a different route
+
   useEffect(() => {
     const handleScroll = () => {
       const search = document.querySelector(".search");
@@ -14,11 +16,20 @@ const Search = ({ CartItem }) => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleSearchKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      // Perform the search action, like navigating to a search results page
+      // For example, you might navigate to a new route with the search term
+      console.log("Search term:", searchTerm);
+      navigate(`/search?query=${searchTerm}`);
+    }
+  };
 
   return (
     <>
@@ -30,7 +41,13 @@ const Search = ({ CartItem }) => {
 
           <div className="search-box f_flex">
             <i className="fa fa-search"></i>
-            <input type="text" placeholder="Search and hit enter..." />
+            <input
+              type="text"
+              placeholder="Search and hit enter..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={handleSearchKeyPress} // Listen for Enter key press
+            />
             <span>All Category</span>
           </div>
 
