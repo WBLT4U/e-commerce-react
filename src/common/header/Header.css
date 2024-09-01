@@ -270,11 +270,11 @@ header ul li a:hover {
   display: none;
 }
 .search.active {
-  height: 12vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100%;
+  width: 50%;
   background-color: #fff;
   box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
@@ -325,7 +325,7 @@ header ul li a:hover {
     display: none; /* Hide the menu list initially */
   }
   .search.active {
-    height: 9vh; /* Further reduce search box height */
+    height: 4vh; /* Further reduce search box height */
   }
 }
 
