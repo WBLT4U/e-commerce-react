@@ -1,8 +1,10 @@
+import React from "react"
+import "./MainPage/Home.css"
 //Create a homepage component...
 const AboutUs = () => {
   return (
-    <section className="home-page">
-      <h1>
+    <section className='home'>
+      <div className='container d_flex'>
         <p>
         ABOUT US <br></br>
           Hello! I’m a dedicated developer with a foundation in Computer Science from Kebbi State University of Science and Technology, and a rich background in PHP, Laravel, ReactJS, JavaScript, HTML5 and CSS. Since I began my journey in technology, I've designed and built custom web applications that not only meet the needs of users but improve their interactions and experiences.
@@ -15,7 +17,7 @@ Whether building ecommerce platforms at WBLT Tech Limited or enhancing education
 
 I am always excited to connect with like-minded professionals and potential collaborators who are on a quest to make technological innovations. Let’s link up! 🚀
         </p>
-      </h1>
+      </h1></div>
     </section>
   );
 };
