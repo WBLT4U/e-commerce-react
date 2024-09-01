@@ -1,12 +1,8 @@
 import React from "react"
 import "./Header.css"
 import Head from "./Head"
-import Home from "../../components/MainPage/Home"
-import AboutUs from "./aboutus"
-import ContactUs from "./contactus"
 import Search from "./Search"
-import Navbar from "./Navbar"
-import { Routes, Route } from 'react-router-dom';
+
 
 const Header = ({ CartItem }) => {
   return (
@@ -14,12 +10,6 @@ const Header = ({ CartItem }) => {
       <Head />
       <Search CartItem={CartItem} />
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/aboutus' element={<AboutUs />}></Route>
-        <Route path='/contactus' element={<ContactUs />}></Route>
-        
-      </Routes>
     </>
   )
 }
