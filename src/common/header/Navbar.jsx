@@ -1,62 +1,79 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+// src/components/Navbar.js
 
-const Navbar = () => {
-  // Toogle Menu
-  const [MobileMenu, setMobileMenu] = useState(false)
+import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import './navbar.css'; // We'll create this CSS file next
+
+import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
+
+function NavBar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
     <>
-      <header className='header'>
-        <div className='container d_flex'>
-          
-          <div className=''>
-
-          {/* catgrories d_flex */}
-            {/* <span class='fa-solid fa-border-all'></span>
-            <h4>
-              Categories <i className='fa fa-chevron-down'></i>
-            </h4> */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <NavLink exact to="/" className="nav-logo">
+            <span> E-Commerce App</span>
+            {/* <i className="fas fa-code"></i> */}
             
-          </div>
+          </NavLink>
 
-          <div className='navlink'>
-            <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-              {/*<ul className='link f_flex uppercase {MobileMenu ? "nav-links-MobileMenu" : "nav-links"} onClick={() => setMobileMenu(false)}'>*/}
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/'>About</Link>
-              </li>
-              <li>
-                <Link to='/'>Contact</Link>
-              </li>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="../components/aboutus"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="../components/contactus"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            {/* <i className={click ? "fas fa-times" : "fas fa-bars"}></i> */}
+
+            {click ? (
+              <span className="icon">
+              <HamburgetMenuClose />
+            </span>
               
-              {/* <li>
-                <Link to='/pages'>Cutting Boards</Link>
-              </li>
-              <li>
-                <Link to='/user'>Kitchen Mat</Link>
-              </li>
-              <li>
-                <Link to='/vendor'>Pot Strainer</Link>
-              </li>
-              <li>
-                <Link to='/track'>Stage Knife</Link>
-              </li>
-              <li>
-                <Link to='/contact'>Garlic Chopper</Link>
-              </li> */}
-            </ul>
-
-            <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
-              {MobileMenu ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
-            </button>
+            ) : (
+              <span className="icon">
+                <HamburgetMenuOpen />{" "}
+              </span>
+              
+            )}
           </div>
         </div>
-      </header>
+      </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default NavBar;
