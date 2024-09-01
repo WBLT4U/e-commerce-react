@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header CartItem={CartItem} />
+        
         <Switch>
           <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
@@ -66,7 +66,7 @@ function App() {
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
         
-        
+          <Header CartItem={CartItem} />
         </Switch>
        
         <Footer />
