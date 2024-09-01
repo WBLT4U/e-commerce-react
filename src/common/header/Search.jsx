@@ -1,26 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./search.css"
+import "./search.css";
+
 const Search = ({ CartItem }) => {
-  // fixed Header
-  window.addEventListener("scroll", function () {
-    const search = document.querySelector(".search");
-    search.classList.toggle("active", window.scrollY > 100);
-  });
+  // Fixed Header
+  useEffect(() => {
+    const handleScroll = () => {
+      const search = document.querySelector(".search");
+      if (search) {
+        search.classList.toggle("active", window.scrollY > 100);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <section className="search">
         <div className="container c_flex">
-          <div className="logo width ">
+          <div className="logo width">
             <h3>E-Commerce</h3>
           </div>
 
-          {<div className="search-box f_flex">
+          <div className="search-box f_flex">
             <i className="fa fa-search"></i>
             <input type="text" placeholder="Search and hit enter..." />
             <span>All Category</span>
-          </div> }
+          </div>
 
           <div className="icon f_flex width">
             <i className="fa fa-user icon-circle"></i>
