@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./App.css"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Routes, Route } from "react-router-dom"
 import Header from "./common/header/Header"
 import Home from "./components/Home"
 import AboutUs from "./components/aboutus"
@@ -10,7 +10,6 @@ import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
 import Sdata from "./components/shops/Sdata"
-import { Routes, Route } from 'react-router-dom';
 
 function App() {
   
