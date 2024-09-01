@@ -68,11 +68,12 @@ function App() {
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
+        
+        
+        </Switch>
         <Route path='/' element={<Home />}></Route>
         <Route path='/aboutus' element={<AboutUs />}></Route>
         <Route path='/contactus' element={<ContactUs />}></Route>
-        
-        </Switch>
         <Footer />
       </Router>
     </>
