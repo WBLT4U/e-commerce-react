@@ -1,4 +1,4 @@
-
+import React from "react"
 //Create a homepage component...
 const AboutUs = () => {
   return (

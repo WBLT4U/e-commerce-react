@@ -1,3 +1,4 @@
+import React from "react"
 //Create a homepage component...
 const ContactUs = () => {
   return (
