@@ -1,5 +1,4 @@
-import React from "react"
-import "./MainPage/Home.css"
+
 //Create a homepage component...
 const AboutUs = () => {
   return (

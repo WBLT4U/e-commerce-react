@@ -61,6 +61,9 @@ function App() {
     <>
       <Router>
         <Header CartItem={CartItem} />
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/aboutus' element={<AboutUs />}></Route>
+        <Route path='/contactus' element={<ContactUs />}></Route>
         <Switch>
           <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
@@ -71,9 +74,7 @@ function App() {
         
         
         </Switch>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/aboutus' element={<AboutUs />}></Route>
-        <Route path='/contactus' element={<ContactUs />}></Route>
+       
         <Footer />
       </Router>
     </>
