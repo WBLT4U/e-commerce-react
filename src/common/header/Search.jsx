@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./search.css";
 
 const Search = ({ CartItem }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate(); // To navigate to a different route
+ 
 
   useEffect(() => {
     const handleScroll = () => {
