@@ -1,6 +1,5 @@
 # e-commerce-react
 
-Overview
 This is a React.js-based eCommerce application that allows users to browse products, add items to their cart, and complete purchases. The application is designed to provide a smooth shopping experience with a modern user interface.
 
 Features
@@ -11,7 +10,7 @@ Checkout: Proceed to checkout and complete the purchase.
 Search and Filter: Search for products and apply filters to narrow down results.
 Installation
 Prerequisites
-Node.js (version 14 or later)
+Node.js (version 20 or later)
 npm (or yarn)
 
 Setup
@@ -37,8 +36,7 @@ Contributing
 3.	Commit your changes.
 4.	Push to the branch.
 5.	Create a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
 
 Contact
 For any questions or support, please contact taofiqabdulsalam48@gmail.com.
