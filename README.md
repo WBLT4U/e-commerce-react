@@ -42,8 +42,11 @@ or
 yarn start
 
 Usage
+
 •	Homepage: Displays featured products and navigation to different product categories.
+
 •	Product Page: Shows details of a selected product and an option to add it to the cart.
+
 •	Cart Page: Displays items added to the cart and provides checkout functionality.
 
 Contributing
