@@ -24,7 +24,7 @@ npm (or yarn)
 Setup
 1.	Clone the repository:
    
-git clone https://github.com/yourusername/ecommerce-react.git
+git clone https://github.com/WBLT4U/e-commerce-react.git
 
 3.	Navigate to the project directory:
 
